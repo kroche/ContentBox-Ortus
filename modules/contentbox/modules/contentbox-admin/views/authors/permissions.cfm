@@ -182,8 +182,7 @@
 				</div>
 
 			</div>
-		</div>
-	</cfif>
+		</cfif>
 	#html.endFieldSet()#
 	#html.endForm()#
 

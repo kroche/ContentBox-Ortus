@@ -62,7 +62,7 @@ component extends="coldbox.system.Interceptor" {
 		prc.allSites         = variables.siteService.getAllFlat( isActive: true );
 
 		// If we are limiting sites by author get the list of sites allowed for this author
-		if ( prc.cbSettings.cb_security_limit_sites_by_author ?: false and len( prc.oCurrentAuthor.getAuthorID() )){
+		if ( (prc.cbSettings.cb_security_limit_sites_by_author ?: false) AND len(prc.oCurrentAuthor.getAuthorID())){
 			prc.authorSites  = variables.siteService.getAuthorSitesFlat( authorID: prc.oCurrentAuthor.getAuthorID(), isActive: true );
 		}
 
